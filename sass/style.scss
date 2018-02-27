@@ -1,5 +1,6 @@
 $page-grey: #5a5a5a;
 $page-pink: #ed145b;
+$section-grey: #f4f4f4;
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,900&subset=latin-ext');
 * {
 	box-sizing: border-box;
@@ -9,7 +10,6 @@ $page-pink: #ed145b;
 body {
 	margin: 0;
 	font-family: Lato;
-	position: relative;
 }
 
 .container {
@@ -17,6 +17,14 @@ body {
 	width: 100%;
 	margin: 0 auto;
 	padding: 0 15px;
+}
+.primary {
+	width: 200px;
+	height: 50px;
+	border-radius: 25px;
+	background-color: $page-pink;
+	border: 0;
+	cursor: pointer;
 }
 
 /*
@@ -80,19 +88,20 @@ Header and navigation
 		height: 100vh;
 		display: flex;
 		align-items: center;
-		z-index: 999;
+		z-index: 50;
 		.intro {
 			display: flex;
 			justify-content: center;
 			flex-direction: column;
 			align-items: center;
-			margin-top: -75px;
+			margin-top: 20px;
 			&__header {
 				font-size: 3em;
 				color: #fff;
 				text-transform: uppercase;
 				font-weight: 200;
 				letter-spacing: 1.15px;
+				text-align: center;
 				&-apart {
 					font-weight: 800;
 				}
@@ -103,28 +112,82 @@ Header and navigation
 				height: 2px;
 				background-color: $page-pink;
 			}
-			&__text {
+			&__text, &__text2 {
 				color: #fff;
 				margin-top: 40px;
 				font-size: 1.15em;
 				font-weight: 300;
+				letter-spacing: 0.55px;
+				text-align: center;
+			}
+			&__text2 {
+				margin-top: 18px;
+			}
+			&__cta {
+				margin-top: 50px;
+				text-transform: uppercase;
+				color: #fff;
+				font-size: 1em;
 			}
 		}
 	}
-
-	.another {
+	/*Promotion section */
+	.promotion {
 		position: relative;
-		z-index: 2;
+		background-color: $section-grey;
 		&:before {
 			content: '';
 			width: 100%;
-			height: 30px;
+			height: 45px;
 			position: absolute;
-			top: -10px;
-			left: 0;
-			transform: rotate(-3deg);
+			transform: rotate(-1deg);
 			background-color: $page-pink;
-			z-index: 1;
+			z-index: -2;
+			top: -25px;
+		}
+		.promotioncontainer {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			min-height: 650px;
+			.promotionblock {
+				display: flex;
+				color: $page-grey;
+				flex-direction: column;				
+				&__text {
+					font-weight: 400;
+					font-size: 2.1em;
+					font-style: italic;
+				}
+				&__line {
+					margin-top: 40px;
+					width: 200px;
+					height: 2px;
+					background-color: $page-pink;
+				}
+				&__paragraph {
+					margin-top: 30px;
+					text-align: justify;
+					font-size: 1em;
+					line-height: 1.6em;
+				}
+				&__paragraph2 {
+					margin-top: 30px;
+					color: $page-pink;
+					text-transform: uppercase;
+				}
+			}
 		}
 	}
+	/* Services section */
+	.services-page {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		&__header {
+		}
+	}
+	
 }
+
