@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Lato;
+  position: relative;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*
+Header and navigation
+*/
+.page-header {
+  height: 50px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  z-index: 2;
+}
+
+.page-header .logo img {
+  display: block;
+}
+
+.page-header .page-navigation .menu-items {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.page-header .page-navigation .menu-items li :hover {
+  color: #ed145b;
+}
+
+.page-header .page-navigation .menu-items li a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  padding: 0 8px;
+  cursor: pointer;
+  color: black;
+}
+
+.page-header .page-navigation .menu-items li .active {
+  color: #ed145b;
+}
+
+/*Main and jumbotron*/
+.jumbotron {
+  background-image: url("../images/hero.png");
+  background-size: cover;
+  height: 100vh;
+}
+/*# sourceMappingURL=style.css.map */

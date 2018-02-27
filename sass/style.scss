@@ -1,0 +1,71 @@
+$page-grey: #5a5a5a;
+$page-pink: #ed145b;
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	margin: 0;
+	font-family: Lato;
+	position: relative;
+}
+
+.container {
+	max-width: 1170px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/*
+Header and navigation
+*/
+
+.page-header {
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 2;
+	.logo {
+		img {
+			display: block;
+		}
+	}
+	.page-navigation {
+		.menu-items {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			display: flex;
+			li {
+				:hover {
+					color: $page-pink;
+				}
+				a {
+					text-decoration: none;
+					font-size: 1.1rem;
+					font-weight: 700;
+					letter-spacing: 0.4px;
+					padding: 0 8px;
+					cursor: pointer;
+					color: black;
+				}
+				.active {
+					color: $page-pink;
+				}
+			}
+		}
+	}
+}
+
+
+
+/*Main and jumbotron*/
+
+
+.jumbotron {
+	background-image: url('../images/hero.png');
+	background-size: cover;
+	height: 100vh;
+}
