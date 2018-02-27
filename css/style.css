@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,900&subset=latin-ext");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,6 +7,7 @@
 body {
   margin: 0;
   font-family: Lato;
+  position: relative;
 }
 
 .container {
@@ -21,6 +23,8 @@ Header and navigation
 .page-header {
   position: absolute;
   width: 100%;
+  padding-top: 10px;
+  z-index: 10;
 }
 
 .page-header .header-bar {
@@ -31,25 +35,29 @@ Header and navigation
   -ms-flex-align: center;
       align-items: center;
   height: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .page-header .header-bar .logo img {
   display: block;
 }
 
-.page-header .header-bar .page-navigation .menu-items {
+.page-header .header-bar .menu__items {
   margin: 0;
   padding: 0;
   list-style-type: none;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.page-header .header-bar .page-navigation .menu-items li :hover {
+.page-header .header-bar .menu__items li :hover {
   color: #ed145b;
 }
 
-.page-header .header-bar .page-navigation .menu-items li a {
+.page-header .header-bar .menu__items li a {
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 700;
@@ -60,14 +68,76 @@ Header and navigation
   transition: .3s;
 }
 
-.page-header .header-bar .page-navigation .menu-items li .active {
+.page-header .header-bar .menu__items li .active {
   color: #ed145b;
 }
 
 /*Main and jumbotron*/
-.jumbotron {
+.page-main .jumbotron {
   background-image: url("../images/hero.png");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  z-index: 999;
+}
+
+.page-main .jumbotron .intro {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  margin-top: -75px;
+}
+
+.page-main .jumbotron .intro__header {
+  font-size: 3em;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 1.15px;
+}
+
+.page-main .jumbotron .intro__header-apart {
+  font-weight: 800;
+}
+
+.page-main .jumbotron .intro__line {
+  margin-top: 40px;
+  width: 200px;
+  height: 2px;
+  background-color: #ed145b;
+}
+
+.page-main .jumbotron .intro__text {
+  color: #fff;
+  margin-top: 40px;
+  font-size: 1.15em;
+  font-weight: 300;
+}
+
+.page-main .another {
+  position: relative;
+  z-index: 2;
+}
+
+.page-main .another:before {
+  content: '';
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  transform: rotate(-3deg);
+  background-color: #ed145b;
+  z-index: 1;
 }
 /*# sourceMappingURL=style.css.map */
