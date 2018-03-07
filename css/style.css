@@ -32,7 +32,7 @@ Header and navigation
   position: absolute;
   width: 100%;
   padding-top: 10px;
-  z-index: 10;
+  z-index: 60;
 }
 
 .page-header .header-bar {
@@ -80,13 +80,16 @@ Header and navigation
   color: #ed145b;
 }
 
-/*Main and jumbotron*/
+/*Main */
+/*Jumbotron*/
 .page-main {
   /*Promotion section */
   /* Services section */
+  /* INTERLUDE SECTION */
 }
 
 .page-main .jumbotron {
+  position: relative;
   background-image: url("../images/hero.png");
   background-size: cover;
   background-position: center;
@@ -153,7 +156,8 @@ Header and navigation
 
 .page-main .promotion {
   position: relative;
-  background-color: #f4f4f4;
+  background-color: #fff;
+  z-index: 2;
 }
 
 .page-main .promotion:before {
@@ -163,17 +167,18 @@ Header and navigation
   position: absolute;
   transform: rotate(-1deg);
   background-color: #ed145b;
-  z-index: -2;
+  z-index: 1;
   top: -25px;
 }
 
 .page-main .promotion .promotioncontainer {
-  position: absolute;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
       align-items: center;
   min-height: 650px;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 
 .page-main .promotion .promotioncontainer .promotionblock {
@@ -210,6 +215,10 @@ Header and navigation
   text-transform: uppercase;
 }
 
+.page-main .promotion .promotioncontainer .laptop__image {
+  max-width: 700px;
+}
+
 .page-main .services-page {
   display: -ms-flexbox;
   display: flex;
@@ -217,7 +226,195 @@ Header and navigation
       align-items: center;
   -ms-flex-direction: column;
       flex-direction: column;
+}
+
+.page-main .services-page__header {
+  color: #5a5a5a;
+  font-weight: 400;
+  font-size: 2.2em;
+}
+
+.page-main .services-page__line {
+  width: 200px;
+  height: 2px;
+  background-color: #ed145b;
+  margin: 40px 0 40px;
+}
+
+.page-main .services-page__paragraph {
+  color: #5a5a5a;
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+}
+
+.page-main .services-page__row {
+  margin: 75px 0 75px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding: 0 100px 0;
+}
+
+.page-main .services-page__row--box {
+  border: 1px solid #5a5a5a;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+
+.page-main .services-page__row--box img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.page-main .interlude-page {
+  background-image: url(../images/hero.png);
+  height: 500px;
+  background-size: cover;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 20px 0 20px;
+  text-align: center;
+}
+
+.page-main .interlude-page__qoutetext {
+  color: white;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+.page-main .prices {
+  background-color: #f4f4f4;
+}
+
+.page-main .prices-page {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding: 15% 0 15%;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.page-main .prices-page__header {
+  font-size: 2.1em;
+  color: #5a5a5a;
+  font-weight: 400;
+}
+
+.page-main .prices-page__line {
+  width: 200px;
+  height: 2px;
+  background-color: #ed145b;
+  margin: 40px 0 40px;
+}
+
+.page-main .prices-page__paragraph {
+  text-align: center;
+  color: #5a5a5a;
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.page-main .prices-page__row {
+  margin-top: 90px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.page-main .prices-page__row .box {
+  -ms-flex: 0.23;
+      flex: 0.23;
+  background-color: #fff;
+}
+
+.page-main .prices-page__row .box .top {
+  background-color: #5a5a5a;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
   -ms-flex-pack: center;
       justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding: 10%;
+  position: relative;
+}
+
+.page-main .prices-page__row .box .top .text {
+  color: #fff;
+  font-size: 1.1em;
+}
+
+.page-main .prices-page__row .box .top .text .cost {
+  font-size: 3em;
+  font-style: bold;
+}
+
+.page-main .prices-page__row .box .top div {
+  background-color: #f4f4f4;
+  width: 80%;
+  height: 40px;
+  border-radius: 25px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  position: absolute;
+  bottom: -20%;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.page-main .prices-page__row .box .bottom {
+  width: 100%;
+  padding-top: 20%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.page-main .prices-page__row .box .bottom ul {
+  list-style-type: none;
+  padding: 0;
+  line-height: 2em;
+}
+
+.page-main .prices-page__row .box .bottom ul li {
+  font-size: 1em;
+  font-color: #5a5a5a;
+  font-weight: 300;
+}
+
+.page-main .prices-page__row .box .bottom button {
+  margin-top: 30px;
+  color: #fff;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */
