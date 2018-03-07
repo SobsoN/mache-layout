@@ -20,8 +20,8 @@ body {
 }
 
 .primary {
-	width: 200px;
-	height: 50px;
+	min-width: 200px;
+	min-height: 50px;
 	border-radius: 25px;
 	background-color: $page-pink;
 	border: 0;
@@ -216,11 +216,18 @@ Header and navigation
 			justify-content: space-between;
 			padding: 0 100px 0;
 			&--box {
-				border: 1px solid $page-grey;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			&--circle {
+				border: 1px solid #bcbcbc;
 				border-radius: 50%;
 				width: 150px;
 				height: 150px;
 				position: relative;
+				display: flex;
+				flex-direction: column;
 				img {
 					position: absolute;
 					top: 50%;
@@ -228,6 +235,12 @@ Header and navigation
 					transform: translate(-50%, -50%);
 				}
 			}
+			h4 {
+					padding: 15% 0 0;
+					font-size: 1em;
+					color: $page-pink;
+					text-transform: uppercase;
+				}
 		}
 	}
 	/* INTERLUDE SECTION */
@@ -253,7 +266,7 @@ Header and navigation
 	.prices-page {
 		display: flex;
 		flex-direction: column;
-		padding: 15% 0 15%;
+		padding: 15% 0 10%;
 		align-items: center;
 		&__header {
 			font-size: 2.1em;
@@ -309,6 +322,7 @@ Header and navigation
 						text-transform: uppercase;
 						font-weight: bold;
 						font-size: 1em;
+						color: $page-grey;
 					}
 				}
 				.bottom {
@@ -324,8 +338,9 @@ Header and navigation
 						line-height: 2em;
 						li {
 							font-size: 1em;
-							font-color: $page-grey;
+							color: $page-grey;
 							font-weight: 300;
+							text-align: center;
 						}
 					}
 					button {
@@ -336,6 +351,64 @@ Header and navigation
 						font-weight: bold;
 					}
 				}
+			}
+		}
+	}
+	.about-page {
+		margin: 5% 0 10%;
+		&__row {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			.box {
+				flex: 30%;
+				display: flex;
+				margin: 5% 0 0;
+				justify-content: space-between;
+				.text {
+					flex: 0.75;
+					line-height: 1.5em;
+					h5 {
+						color: $page-pink;
+						font-size: 1em;
+						text-transform: uppercase;
+						padding: 0 0 5%;
+						text-align: justify;
+					}
+					p {
+						font-size: 0.9em;
+						font-weight: 300;
+						color: $page-grey;
+					}
+				}
+				.image {
+					flex: 0.15;
+				}
+			}
+		}
+	}
+	.banner-page {
+		background-color: $page-pink;
+		min-height: 200px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 11% 0;
+		button {
+			background-color: #fff;
+			color: $page-pink;
+			font-size: 1em;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+		h6 {
+			font-size: 2.2em;
+			font-weight: 300;
+			color: #fff;
+			text-transform: uppercase;
+			span {
+				font-weight: 700;
 			}
 		}
 	}
