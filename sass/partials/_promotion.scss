@@ -1,0 +1,74 @@
+.promotion-section {
+	position: relative;
+	background-color: #fff;
+	z-index: 2;
+	&:before {
+		content: '';
+		width: 100%;
+		height: 45px;
+		position: absolute;
+		transform: rotate(-1deg);
+		background-color: $page-pink;
+		z-index: 1;
+		top: -25px;
+	}
+	.promotion {
+		display: flex;
+		align-items: center;
+		min-height: 650px;
+		justify-content: space-between;
+		padding: 5% 0;
+		flex-wrap: wrap;
+
+		.promotionblock {
+			display: flex;
+			color: $page-grey;
+			flex-direction: column;	
+			margin-right: 1%;
+			flex: 1 0 30%;
+
+			@include media('<=tablet') {
+			align-items: center;
+			}
+
+			&__text {
+				font-weight: 400;
+				font-size: 2.1em;
+				font-style: italic;
+			}
+			&__line {
+				margin-top: 40px;
+				width: 200px;
+				height: 2px;
+				background-color: $page-pink;
+
+				@include media('<=tablet') {
+					display: none;
+				}
+
+			}
+			&__paragraph {
+				margin-top: 30px;
+				text-align: justify;
+				font-size: 1em;
+				line-height: 1.6em;
+			}
+			&__paragraph2 {
+				margin-top: 30px;
+				color: $page-pink;
+				text-transform: uppercase;
+			}
+		}
+		.laptop {
+			flex: 1 0 69%;
+
+			@include media('<=tablet') {
+			display: none;
+			}
+
+			&__image {
+				max-width: 100%;
+			}
+		}
+	}
+}

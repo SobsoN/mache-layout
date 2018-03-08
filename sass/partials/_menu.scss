@@ -1,0 +1,64 @@
+.menu {
+
+	@include media('<=tablet') {
+		position: fixed;
+		top: 0;
+		right: -200px;
+		bottom: 0;
+		background: #000;
+		width: 200px;
+		padding: 20px 10px;
+		transition: all 0.5s ease-in-out;
+		&--active {
+			right: 0;
+		}
+	}
+
+	&__items {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		display: flex;
+		flex-wrap: wrap;
+		@include media('<=tablet') {
+			flex-direction: column;
+		}
+	}
+
+	&__item {
+		:hover {
+			color: $page-pink;
+		}
+	}
+
+	&__link{
+		text-decoration: none;
+		font-size: 1.1rem;
+		font-weight: 700;
+		letter-spacing: 0.4px;
+		padding: 0 8px;
+		cursor: pointer;
+		color: #fff;
+		transition: .3s;
+	}
+			
+	&__toogle {
+		display: none;
+		@include media('<=tablet') {
+			display: block;
+			position: absolute;
+			top: 15px;
+			left: -45px;
+			border: none;
+			background: transparent;
+
+			&--line {
+				display: block;
+				width: 20px;
+				height: 2px;
+				margin: 5px 0;
+				background-color: $page-pink;
+			}
+		}
+	}
+}

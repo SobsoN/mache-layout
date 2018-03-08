@@ -7,44 +7,54 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+	<!-- HEADER AND MENU  -->
 	<header class="page-header">
 		<div class="container">
 			<div class="header-bar">
-				<div class="logo">
-					<img src="images/logo.png" alt="logo" />
-				</div>
-				<nav class="menu">
+				<figure class="header-bar__logo">
+					<img class="header-bar__image" src="images/logo.png" alt="logo" />
+				</figure>
+				<nav id="menu" class="menu">
 					<ul class="menu__items">
-						<li class="menu__item"><a class="active menu__link" href="#">Home</a></li>
+						<li class="menu__item"><a class="menu__link" href="#">Home</a></li>
 						<li class="menu__item"><a class="menu__link" href="#">About Us</a></li>
 						<li class="menu__item"><a class="menu__link" href="#">Our Services</a></li>
 						<li class="menu__item"><a class="menu__link" href="#">Prices</a></li>
 						<li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
 					</ul>
+					<!-- HAMBURGER -->
+					<button id="hamburger" class="menu__toogle">
+						<span class="menu__toogle--line">&nbsp;</span>
+						<span class="menu__toogle--line">&nbsp;</span>
+						<span class="menu__toogle--line">&nbsp;</span>
+					</button>
 				</nav>
 			</div>
 		</div>
 	</header>
+	<!--MAIN SECTION -->
 	<main class="page-main">
+
+		<!-- JUMBOTRON -->
 		<section class="jumbotron">
 			<div class="container">
 				<div class="intro">
-					<h1 class="intro__header"><span class="intro__header-apart">Mache </span>free psd template</h1>
+					<h1 class="intro__header"><span class="intro__header--apart">Mache </span>free psd template</h1>
 					<span class="intro__line"></span>
 					<p class="intro__text">
 						Elegant and clean PSD template, which you can download and use for free! 
 					</p>
-					<p class="intro__text2">
+					<p class="intro__text intro__text--margin">
 						You can easily modify the design to make it your own and help you get your project running faster.
 					</p>
 					<button class="primary intro__cta">show more</button>
 				</div>
 			</div>
 		</section>
-		
-		<section class="promotion">
+		<!--PROMOTION SECTION -->
+		<section class="promotion-section">
 			<div class="container">
-				<div class="promotioncontainer">
+				<div class="promotion">
 					<div class="promotionblock">
 						<h2 class="promotionblock__text">Powerfull PSD template available for free!
 						</h2>
@@ -62,38 +72,38 @@
 				</div>
 			</div>
 		</section>
-		<section class="services">
+		<section class="services-section">
 			<div class="container">
-				<div class="services-page">
-					<h3 class="services-page__header">Our Services</h3>
-					<span class="services-page__line"></span>
-					<p class="services-page__paragraph">
+				<div class="services">
+					<h3 class="services__header">Our Services</h3>
+					<span class="services__line"></span>
+					<p class="services__paragraph">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore <br /> et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
 					</p>
-					<div class="services-page__row container">
-						<div class="services-page__row--box">
-							<div class="services-page__row--circle" >
-								<img src="images/1.png">
+					<div class="services__row container">
+						<div class="services__box">
+							<div class="services__circle" >
+								<img class="services__circle--image" src="images/1.png">
 							</div>
-							<h4>fully editable</h4>
+							<h4 class="services__circle--header">fully editable</h4>
 						</div>
-						<div class="services-page__row--box">
-							<div class="services-page__row--circle" >
-								<img src="images/2.png">
+						<div class="services__box">
+							<div class="services__circle" >
+								<img class="services__circle--image" src="images/2.png">
 							</div>
-							<h4>fully editable</h4>
+							<h4 class="services__circle--header">free download</h4>
 						</div>
-						<div class="services-page__row--box">
-							<div class="services-page__row--circle" >
-								<img src="images/3.png">
+						<div class="services__box">
+							<div class="services__circle" >
+								<img class="services__circle--image" src="images/3.png">
 							</div>
-							<h4>fully editable</h4>
+							<h4 class="services__circle--header">modern design</h4>
 						</div>
-						<div class="services-page__row--box">
-							<div class="services-page__row--circle" >
-								<img src="images/4.png">
+						<div class="services__box">
+							<div class="services__circle" >
+								<img class="services__circle--image" src="images/4.png">
 							</div>
-							<h4>fully editable</h4>
+							<h4 class="services__circle--header">100% responsive</h4>
 						</div>
 					</div>
 				</div>
@@ -269,6 +279,76 @@
 				<button class="banner-page__button primary">join us</button>
 			</div>
 		</section>
+		<section class="gallery-section">
+			<div class="container">
+				<div class="gallery">
+					<h6 class="gallery__header">Our Latest Updates</h6>
+					<span class="gallery__line"></span>
+					<p class="gallery__paragraph">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et <br /> dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+					</p>
+					<div class="row">
+						<div class="box">
+							<div class="phone"></div>
+							<div class="text">
+								<h6>lorem ipsuma dolor sit</h6>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur elit. sed do eiusmod tempor incididunt ut laboreet.
+								</p>
+							</div>
+						</div>
+						<div class="box">
+							<div class="illusion"></div>
+							<div class="text">
+								<h6>lorem ipsuma dolor sit</h6>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur elit. sed do eiusmod tempor incididunt ut laboreet.
+								</p>
+							</div>
+						</div>
+						<div class="box">
+							<div class="city"></div>
+							<div class="text">
+								<h6>lorem ipsuma dolor sit</h6>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur elit. sed do eiusmod tempor incididunt ut laboreet.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="box">
+							<div class="girl"></div>
+							<div class="text">
+								<h6>lorem ipsuma dolor sit</h6>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur elit. sed do eiusmod tempor incididunt ut laboreet.
+								</p>
+							</div>
+						</div>
+						<div class="box">
+							<div class="bridge"></div>
+							<div class="text">
+								<h6>lorem ipsuma dolor sit</h6>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur elit. sed do eiusmod tempor incididunt ut laboreet.
+								</p>
+							</div>
+						</div>
+						<div class="box">
+							<div class="peron"></div>
+							<div class="text">
+								<h6>lorem ipsuma dolor sit</h6>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur elit. sed do eiusmod tempor incididunt ut laboreet.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

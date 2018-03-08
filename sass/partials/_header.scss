@@ -1,0 +1,16 @@
+.page-header {
+	position: absolute;
+	width: 100%;
+	padding-top: 10px;
+	z-index: 60;
+	.header-bar{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 50px;
+		flex-wrap: wrap;
+		&__image {
+			display: block;
+		}
+	}
+}
